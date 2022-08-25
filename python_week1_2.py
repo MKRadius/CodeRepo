@@ -11,3 +11,8 @@
 
     #1-line-command
     #print("The area of the circle is ", math.pi * pow(float(input("Input radius: ")), 2))
+
+#Phase 6
+import random
+print(f"{random.randint(0,999):03d}")
+print(random.randint(0,9), random.randint(0,9), random.randint(0,9))
