@@ -60,3 +60,7 @@ import random
 print("First lock: " + str(random.randint(0, 9)) + str(random.randint(0, 9)) + str(random.randint(0, 9)))
 print("First lock: " + str(random.randint(1, 6)) + str(random.randint(1, 6)) + str(random.randint(1, 6))+ str(random.randint(1, 6)))
 
+#extra context
+#l.zskhglkzjhgsjg
+
+print("Completed by Khai Cao")
