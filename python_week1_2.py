@@ -56,4 +56,4 @@ print(int(f_lots * 13.3 // 1000), "kilograms and", f"{f_lots * 13.3 % 1000:.2f}"
 #Exercise 2.6
 import random
 print("First lock: " + str(random.randint(0, 9)) + str(random.randint(0, 9)) + str(random.randint(0, 9)))
-print("First lock: " + str(random.randint(1, 6)) + str(random.randint(1, 6)) + str(random.randint(1, 6))+ str(random.randint(1, 6)))
+print("Second lock: " + str(random.randint(1, 6)) + str(random.randint(1, 6)) + str(random.randint(1, 6))+ str(random.randint(1, 6)))
