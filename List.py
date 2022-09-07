@@ -11,7 +11,7 @@ for i in match_points:
 ############
 
 
-shopping_list = ["pencil", "eraser", "books", "books", "pen", 3, 5]
+shopping_list = ["pencil", "eraser", "books", "pen", 3, 5]
 print(shopping_list)
 shopping_list[3] = "food"
 shopping_list[5] = 45

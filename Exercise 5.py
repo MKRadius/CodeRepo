@@ -13,4 +13,53 @@ print("Sum of dice:", dice_sum)
 
 
 #Exercise 5.2
+userInput = "input"
+number = []
 
+while True:
+    userInput = input("Input: ")
+    
+    if userInput == '':
+        break
+    
+    userNumber = int(userInput)
+    number.append(userNumber)
+
+if len(number) != 0:
+    number.sort(reverse = True)
+    print("Number in descending order:", number)
+else:
+    print("No input.")
+  
+
+
+#Exercise 5.3
+import math
+inputNumber = int(input("Input number: "))
+primeStatus = True
+
+if inputNumber == 0 or inputNumber == 1:
+    print(inputNumber, "is not a prime number")
+else: 
+    for i in range(2, int(math.sqrt(inputNumber)) + 1):
+        if inputNumber % i == 0:
+            primeStatus = False
+            break
+
+    if primeStatus is False:
+        print(inputNumber, "is not a prime number")
+    else:
+        print(inputNumber, "is a prime number")
+        
+
+
+#Exercise 5.4
+citiesName = []
+print("Input 5 cities name")
+
+for i in range(5):
+    userInput = input(f"Input city {i + 1} name: ")
+    citiesName.append(userInput)
+
+for i in citiesName:
+    print(f"City {citiesName.index(i) + 1} name is: {i}")
