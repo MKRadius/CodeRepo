@@ -36,3 +36,14 @@ print(shopping_list)
 shopping_list.pop(5)
 shopping_list.pop(4)
 print(shopping_list)
+
+originalList = [1,2,3,4,5,6]
+newList = originalList
+
+print(originalList)
+print(newList)
+
+newList.pop(5)
+
+print(originalList)
+print(newList)
