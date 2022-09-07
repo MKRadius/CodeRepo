@@ -93,8 +93,7 @@ while attemps > 0:
             break
     elif inp_username == username and inp_password == password:
         print("Welcome\n")
-
-
+        break
 
 #Exercise 4.6
 import random
@@ -105,8 +104,8 @@ i = 0
 
 
 while True:
-    x_axis = random.random()
-    y_axis = random.random()
+    x_axis = random.uniform(-1, 1)
+    y_axis = random.uniform(-1, 1)
 
     if pow(x_axis, 2) + pow(y_axis, 2) < 1:
         pointsInsideCircle += 1
