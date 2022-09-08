@@ -27,7 +27,11 @@ while True:
 
 if len(number) != 0:
     number.sort(reverse = True)
-    print("Number in descending order:", number)
+    print("5 biggest numbers in descending order:")
+    
+    for i in range(5):
+        print(number[i])
+
 else:
     print("No input.")
   
