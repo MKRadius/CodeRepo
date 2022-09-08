@@ -99,3 +99,30 @@ print("New list:     ", newList)
 
 
 #Exercise 6.6
+import math
+
+def pricePerMeterSquare(diameter, price):
+    result = price / (pow((diameter / 2), 2) * math.pi)
+    return result
+
+pizzaPnP = []
+
+for i in range(2):
+    pizzaDiameter = float(input(f"Input pizza {i + 1} diameter (cm): "))
+    pizzaPrice = float(input(f"Input pizza {i + 1} price (Euro): "))
+    print("")
+
+    #pricePerMeterSquare(pizzaDiameter, pizzaPrice)
+    pizzaPnP.append(pricePerMeterSquare(pizzaDiameter, pizzaPrice))
+
+print(f"Pizza 1 is {pizzaPnP[0]:.3f} euro/m2")
+print(f"Pizza 2 is {pizzaPnP[1]:.3f} euro/m2")
+print("")
+
+if pizzaPnP[0] < pizzaPnP[1]:
+    print("Pizza 1 benefits you more")
+elif pizzaPnP[0] > pizzaPnP[1]:
+    print("Pizza 2 benefits you more")
+else:
+    print("Take whatever you want")
+
