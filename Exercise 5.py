@@ -29,8 +29,15 @@ if len(number) != 0:
     number.sort(reverse = True)
     print("5 biggest numbers in descending order:")
     
-    for i in range(5):
-        print(number[i])
+    if len(number) >= 5:
+        for i in range(5):
+            print(number[i], " ", end = '')
+        print("")
+    
+    else:
+        for i in range(len(number)):
+            print(number[i], " ", end = '')
+        print("")
 
 else:
     print("No input.")
