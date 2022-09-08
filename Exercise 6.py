@@ -101,7 +101,7 @@ print("New list:     ", newList)
 import math
 
 def pricePerMeterSquare(diameter, price):
-    result = price / (pow((diameter / 2), 2) * math.pi)
+    result = price / (pow(((diameter / 100) / 2), 2) * math.pi)
     return result
 
 pizzaPnP = []
