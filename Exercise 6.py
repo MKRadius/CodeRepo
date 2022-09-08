@@ -1,4 +1,3 @@
-"""
 #Exercise 6.1
 import random
 diceNum = 0
@@ -95,7 +94,7 @@ removeUnevenNumber(newList)
 
 print("Original list:", originalList)
 print("New list:     ", newList)
-"""
+
 
 
 #Exercise 6.6
