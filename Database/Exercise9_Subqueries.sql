@@ -33,3 +33,9 @@ where id in (
 
 
 /*3*/
+select name
+from country
+where iso_country not in (
+    select iso_country
+    from airport
+);
