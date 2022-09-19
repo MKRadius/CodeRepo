@@ -24,4 +24,5 @@ inner join game on airport.ident = game.location;
 select airport.name as name, game.screen_name 
 from airport 
 left join game
-on airport.ident = game.location;
+on airport.ident = game.location
+where airport.name like "%Hels%";
