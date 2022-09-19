@@ -18,3 +18,10 @@ select game.screen_name as screen_name, country.name as name
 from airport
 inner join country on airport.iso_country = country.iso_country
 inner join game on airport.ident = game.location;
+
+
+/*4*/
+select airport.name as name, game.screen_name 
+from airport 
+left join game
+on airport.ident = game.location;
