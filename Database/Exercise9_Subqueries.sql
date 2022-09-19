@@ -50,6 +50,6 @@ where id not in (
     where game_id in (
         select id
         from game
-        where name = "Heini"
+        where screen_name = "Heini"
     )
 );
