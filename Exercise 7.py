@@ -1,11 +1,13 @@
-"""
 #Exercise 7.1
 seasonOfTheYear = ("Spring", "Summer", "Autumn", "Winter")
 
 userMonth = int(input("Input month (1 - 12): "))
-userSeason = seasonOfTheYear[userMonth // 3 - 1]
+if 1 <= userMonth <= 12:
+    userSeason = seasonOfTheYear[userMonth // 3 - 1]
+    print(f"Month {userMonth} is {userSeason}")
+else:
+    print("Invalid month input")
 
-print(f"Month {userMonth} is {userSeason}")
 
 
 #Exercise 7.2
@@ -27,7 +29,7 @@ print("Name list:")
 
 for i in name:
     print(i)
-"""   
+  
 
 
 #Exercise 7.3
@@ -71,5 +73,5 @@ while True:
         print("Invalid input. Please try again.\n")
         continue
 
-#Dicttionary check
+#Dictionary check
 #print(airport)
