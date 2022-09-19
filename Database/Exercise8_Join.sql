@@ -26,3 +26,10 @@ from airport
 left join game
 on airport.ident = game.location
 where airport.name like "%Hels%";
+
+
+/*5*/
+select goal.name as name, game.screen_name
+from goal
+join goal_reached on goal.id = goal_reached.goal_id
+left join game on goal_reached.game_id = game.id;
