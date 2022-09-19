@@ -21,11 +21,11 @@ where iso_country = (
 /*3*/
 select screen_name
 from game
-where id = (
+where id in (
     select game_id
     from goal_reached
-    where goal_id = (
-        select name
+    where goal_id in (
+        select id
         from goal
         where name = "CLOUDS"
     )
