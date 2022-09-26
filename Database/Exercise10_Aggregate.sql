@@ -3,15 +3,13 @@ from airport;
 
 
 
-select continent, count(name)
+select continent, count(*)
 from country
 group by continent;
 
 
 
 select screen_name, count(*)
-from game
-having count(*) in (
-    select game_id
-    from goal_reached
-);
+from game, goal_reached
+where id = game_id
+group by screen_name;
