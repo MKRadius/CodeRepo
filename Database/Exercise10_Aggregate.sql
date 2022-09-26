@@ -48,3 +48,16 @@ where elevation_ft in (
     select max(elevation_ft)
     from airport
 );
+
+
+
+select name
+from country
+where iso_country in (
+    select iso_country
+    from airport
+    where elevation_ft in (
+        select max(elevation_ft)
+        from airport
+    )
+);
