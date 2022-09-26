@@ -25,8 +25,10 @@ where co2_consumed in (
 
 
 
-select name, count(*)
-from country
+select country.name, count(*)
+from country, airport
+where country.iso_country = airport.iso_country
+group by country.iso_country
 order by count(*) desc
 limit 50;
 
