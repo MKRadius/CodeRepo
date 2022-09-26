@@ -11,7 +11,7 @@ group by continent;
 
 select screen_name, count(*)
 from game, goal_reached
-where game.id = game.game_id
+where game.id = goal_reached.game_id
 group by screen_name;
 
 
