@@ -21,4 +21,14 @@ from game
 where co2_consumed in (
     select min(co2_consumed)
     from game
-)
+);
+
+
+
+select name, count(*)
+from country
+order by count(*) desc
+limit 50;
+
+
+
