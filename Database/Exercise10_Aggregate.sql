@@ -11,7 +11,7 @@ group by continent;
 
 select screen_name, count(*)
 from game, goal_reached
-where id = game_id
+where game.id = game.game_id
 group by screen_name;
 
 
@@ -61,3 +61,15 @@ where iso_country in (
         from airport
     )
 );
+
+
+
+select count(*)
+from game, goal_reached
+where game.id = goal_reached.game_id and screen_name = "Vesa";
+
+
+
+select name
+from airport
+where 
