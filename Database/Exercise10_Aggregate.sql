@@ -34,3 +34,8 @@ limit 50;
 
 
 
+select country.name
+from country, airport
+where country.iso_country = airport.iso_country 
+group by airport.isocountry
+having count(airport.iso_country) >= 1000;
