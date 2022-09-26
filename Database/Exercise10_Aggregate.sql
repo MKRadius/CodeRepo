@@ -72,4 +72,7 @@ where game.id = goal_reached.game_id and screen_name = "Vesa";
 
 select name
 from airport
-where 
+where latitude_deg in (
+    select min(latitude_deg)
+    from airport
+);
