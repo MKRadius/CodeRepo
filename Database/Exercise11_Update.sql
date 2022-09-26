@@ -7,4 +7,3 @@ where location in (
 );
 
 
-
