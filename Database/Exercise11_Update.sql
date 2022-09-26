@@ -7,3 +7,9 @@ set location = (
 where screen_name = "Vesa";
 
 
+
+delete from goal_reached;
+
+
+
+delete from game;
