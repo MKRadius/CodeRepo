@@ -33,3 +33,36 @@ class Car:
         self.travelled_distance  = travelled_distance
 
         return
+
+    def accelerate(self, speed_change: int):
+        if self.current_speed + speed_change > self.maximum_speed or self.current_speed + speed_change < 0:
+            print("Can't make changes to the speed")
+        else:
+            self.current_speed += speed_change
+
+        return
+
+    def emergency_brake(self):
+        print("Emergency brake")
+        
+        if self.current_speed > 200:
+            self.current_speed -= 200
+        else:
+            self.current_speed = 0
+
+        return
+
+new_car = Car("ABC-123", 142)
+
+new_car.accelerate(30)
+new_car.accelerate(70)
+new_car.accelerate(50)
+
+print("Current speed:", new_car.current_speed, "km/h")
+
+new_car.emergency_brake()
+print("Current speed:", new_car.current_speed, "km/h")
+
+
+
+#Exercise 9.3
