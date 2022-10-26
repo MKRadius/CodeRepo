@@ -6,8 +6,6 @@ class Car:
         self.current_speed       = current_speed
         self.travelled_distance  = travelled_distance
 
-        return
-    
     
 new_car = Car("ABC-123", 142)
 
@@ -32,8 +30,6 @@ class Car:
         self.current_speed       = current_speed
         self.travelled_distance  = travelled_distance
 
-        return
-
     def accelerate(self, speed_change: int):
         if self.current_speed + speed_change > self.maximum_speed :
             self.current_speed = self.maximum_speed
@@ -41,8 +37,6 @@ class Car:
             self.current_speed = 0
         else:
             self.current_speed += speed_change
-
-        return
 
     def emergency_brake(self):
         print("Emergency brake")
@@ -52,7 +46,6 @@ class Car:
         else:
             self.current_speed = 0
 
-        return
 
 new_car = Car("ABC-123", 142)
 
@@ -75,8 +68,6 @@ class Car:
         self.current_speed       = current_speed
         self.travelled_distance  = travelled_distance
 
-        return
-
     def accelerate(self, speed_change: int):
         if self.current_speed + speed_change > self.maximum_speed :
             self.current_speed = self.maximum_speed
@@ -84,8 +75,6 @@ class Car:
             self.current_speed = 0
         else:
             self.current_speed += speed_change
-
-        return
 
     def emergency_brake(self):
         print("Emergency brake")
@@ -95,11 +84,9 @@ class Car:
         else:
             self.current_speed = 0
 
-        return
-
     def drive(self, hour_driven):
         self.travelled_distance += self.current_speed * hour_driven
-        return
+
 
 new_car = new_car = Car("ABC-123", 142, 60, 2000)
 
@@ -119,8 +106,6 @@ class Car:
         self.current_speed       = current_speed
         self.travelled_distance  = travelled_distance
 
-        return
-
     def accelerate(self, speed_change: int):
         if self.current_speed + speed_change > self.maximum_speed :
             self.current_speed = self.maximum_speed
@@ -128,8 +113,6 @@ class Car:
             self.current_speed = 0
         else:
             self.current_speed += speed_change
-
-        return
 
     def emergency_brake(self):
         print("Emergency brake")
@@ -139,11 +122,9 @@ class Car:
         else:
             self.current_speed = 0
 
-        return
-
     def drive(self, hour_driven):
         self.travelled_distance += self.current_speed * hour_driven
-        return
+
 
 race_car = []
 
