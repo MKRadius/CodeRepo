@@ -148,7 +148,6 @@ while not reached_10000km:
         
         if race_car[i].travelled_distance >= 10000:
             reached_10000km = True
-            break
 
 print(" __________________________________________________________________________________________________________________________")
 print("||Registration number     ||Maximum speed (km/h)      ||Current speed (km/h)       ||Travelled distance (km) ||Winner     ||")
