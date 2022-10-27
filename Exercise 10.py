@@ -1,4 +1,4 @@
-"""#Exercise 10.1
+#Exercise 10.1
 class Elevator:
     def __init__(self, bottom_floor: int, top_floor: int):
         self.top_floor = top_floor
@@ -165,7 +165,7 @@ landmark81.run_elevator(5, 81)
 print("")
 
 landmark81.fire_alarm()
-"""
+
 
 
 #Exercise 10.4
