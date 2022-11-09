@@ -1,5 +1,4 @@
 #Exercise 12.1
-"""
 import requests
 
 while True:
@@ -15,26 +14,29 @@ while True:
         continue
     else:
         break
-"""
+
 
 
 #Exercise 12.2
 import requests
-import json
-
-weather_info = {}
 
 while True:
+    weather_info = {}
+
     city_name = input("Enter city name (Input nothing to exit): ")
     if city_name == "":
         break
+    else:
+        city_name = city_name[0:1].upper() + city_name[1:].lower()
+    
     request = "https://api.openweathermap.org/data/2.5/weather?q=" + str(city_name) + "&appid=e5ffc7d7fbfe9285e108756cb60ec915"
 
     print("What unit of measurement do you want to use?")
-    print("1. Standard (K)")
-    print("2. Metric   (°C)")
-    print("3. Imperial (°F)")
+    print("1. Standard (K, km/h)")
+    print("2. Metric   (°C, km/h)")
+    print("3. Imperial (°F, mph)")
     unit = input("Input (1/2/3): ")
+    print("")
 
     if unit == "1":
         temp_unit = "K"
@@ -51,21 +53,32 @@ while True:
         velocity_multiplication = 2.24
         speed_unit = "mph"
 
+    try:
+        response = requests.get(request)
 
+        if response.status_code == 200:
+            response_data = response.json()
+
+    except requests.exceptions.RequestException as e:
+        print("Error occured in request. Please try again.")
+        continue
     
-    response = requests.get(request).json()
+    if response.status_code == 404:
+        print("No data achieved (Error 404)")
+        print("")
+        continue
 
-    weather_info["main_weather_condition"] = response["weather"][0]["main"]
-    weather_info["weather_decription"]      = response["weather"][0]["description"]
+    weather_info["main_weather_condition"] = response_data["weather"][0]["main"]
+    weather_info["weather_decription"]     = response_data["weather"][0]["description"]
 
-    weather_info["temp"]        = response["main"]["temp"]
-    weather_info["feels_like"]  = response["main"]["feels_like"]
-    weather_info["temp_min"]    = response["main"]["temp_min"]
-    weather_info["temp_max"]    = response["main"]["temp_max"]
-    weather_info["pressure"]    = response["main"]["pressure"]
-    weather_info["humidity"]    = response["main"]["humidity"]
+    weather_info["temp"]        = response_data["main"]["temp"]
+    weather_info["feels_like"]  = response_data["main"]["feels_like"]
+    weather_info["temp_min"]    = response_data["main"]["temp_min"]
+    weather_info["temp_max"]    = response_data["main"]["temp_max"]
+    weather_info["pressure"]    = response_data["main"]["pressure"]
+    weather_info["humidity"]    = response_data["main"]["humidity"]
 
-    weather_info["wind_speed"]       = str(round(int(response["wind"]["speed"]) * velocity_multiplication, 2))
+    weather_info["wind_speed"]  = str(round(int(response_data["wind"]["speed"]) * velocity_multiplication, 2))
 
     #print(json.dumps(weather_info, indent = 2))
 

@@ -1,7 +1,4 @@
 #Exercise 11.1
-from shutil import register_unpack_format
-
-
 class publication:
     def __init__(self, name: str):
         self.name = name
