@@ -59,7 +59,7 @@ def page_not_found(error_code):
 
 if __name__ == '__main__':
     app.run(use_reloader=True, host='127.0.0.1', port=5000)
-    
+
 
 
 #Exercise 13.2
@@ -95,7 +95,7 @@ def airport(icao_code):
         }
 
         json_response = json.dumps(response)
-        http_response = Response(response=json_response, status=400, mimetype="application/json")
+        http_response = Response(response=json_response, mimetype="application/json")
 
         return http_response
     except:
@@ -117,7 +117,7 @@ def page_not_found(error_code):
     }
 
     json_response = json.dumps(response)
-    http_response = Response(response=json_response, status=400, mimetype="application/json")
+    http_response = Response(response=json_response, status=404, mimetype="application/json")
 
     return http_response
 
